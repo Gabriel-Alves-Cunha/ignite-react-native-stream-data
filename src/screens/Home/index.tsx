@@ -60,7 +60,10 @@ export function Home() {
 		try {
 			await signOut();
 		} catch (error) {
-			Alert.alert("Erro SignOut", "delete api.defaults.headers.authorization;");
+			Alert.alert(
+				"Erro SignOut",
+				"Ocorreu um erro ao tentar se deslogar do app"
+			);
 		}
 	}
 
@@ -159,8 +162,6 @@ export function Home() {
 					) : (
 						new Feather({ name: "power", size: 24, color: theme.colors.white })
 					)}
-					Verify if isLoggingOut is true If it is, show an ActivityIndicator
-					Otherwise, show Feather's power icon
 				</SignOutButton>
 			</Header>
 
